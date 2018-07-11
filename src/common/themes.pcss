@@ -1,0 +1,27 @@
+/* 
+Variables are imported from fake_node_modules folder
+however there is possibility to import directly from node module
+for example: `@value palette-1 from "my-theme"`
+*/
+
+@value 
+  palette_yankees-blue, 
+  palette_very-pale-yellow, 
+  palette_independence, 
+  palette_stil-de-grain-yellow, 
+  palette_amazon 
+  from "../../fake_node_modules/palette.pcss";
+
+.dark {
+  --component-primary-bg: palette_yankees-blue;
+  --component-primary-text: palette_very-pale-yellow;
+  --component-secondary-bg: palette_independence;
+  --component-secondary-text: palette_stil-de-grain-yellow;
+}
+
+.light {
+  --component-primary-bg: palette_stil-de-grain-yellow;
+  --component-primary-text: palette_yankees-blue;
+  --component-secondary-bg: palette_very-pale-yellow;
+  --component-secondary-text: palette_amazon;
+}
